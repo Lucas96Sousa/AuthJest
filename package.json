@@ -1,0 +1,21 @@
+{
+  "name": "AuthJest",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Lucas96Sousa/AuthJest.git",
+  "author": "Lucas Sousa <Lucas996oliveira@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.17.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "sequelize-cli": "^5.5.1"
+  }
+}
