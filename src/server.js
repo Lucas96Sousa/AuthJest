@@ -1,6 +1,7 @@
-const app = require('./app')
-const port = 3000
+const app = require("./app");
 
-app.listen( port, () => {
-    console.log(`Acess port ${port}`)
-})
+const port = 4000;
+
+app.listen(process.env.PORT || port, () => {
+  console.log(`Porta de Acesso é ${port}`);
+});

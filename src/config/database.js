@@ -1,14 +1,19 @@
+require("dotenv").config({
+  path: process.env.NODE_ENV === "test" ? ".env.test" : ".env"
+});
+
 module.exports = {
-    host:'postgres://ywwlmbwm:l49HII...@tuffi.db.elephantsql.com:5432/ywwlmbwm',
-    username:'ywwlmbwm',
-    password:'l49HIIHXXH8-ZcQVdcLkPmxpO0nyHPxX',
-    dialect:'postgres',
-    database:'ywwlmbwm',
-    oporatorAliases: false,
-    define: {
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  host: process.env.DB_HOST,
+  dialect: process.env.DB_DIALECT || "postgres",
+  storage: "./__tests__/database.sqlite",
+  operatorsAliases: false,
+  logging: false,
+  define: {
     timestamps: true,
     underscored: true,
-    underscoredAll: true,
-  },
-
-}
+    underscoredAll: true
+  }
+};
